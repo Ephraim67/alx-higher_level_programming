@@ -13,7 +13,7 @@ class Rectangle:
     @property
     def width(self):
         # Retrive the width of the rectangle
-        return self.__width
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -27,7 +27,7 @@ class Rectangle:
     @property
     def height(self):
         # Retrieve the height of the rectangle
-        return self.__height
+        return (self.__height)
 
     @height.setter
     def height(self, value):
