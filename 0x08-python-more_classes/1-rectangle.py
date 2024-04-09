@@ -12,7 +12,7 @@ class Rectangle:
           ValueError: if size is less than 0
     """
 
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """Initialize the Rectangle instance with width and height."""
         self.__width = width
         self.__height = height
