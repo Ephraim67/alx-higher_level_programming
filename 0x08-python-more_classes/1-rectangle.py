@@ -3,7 +3,14 @@
 
 
 class Rectangle:
-    """A class that defines a rectangle"""
+    """A class that defines a rectangle
+    Args:
+        width: represent the width of the rectangle
+        height: represent the height of the rectangle
+    Raises:
+          TypeError: If size is not integer
+          ValueError: if size is less than 0
+    """
 
     def __init__(self, width, height):
         """Initialize the Rectangle instance with width and height."""
