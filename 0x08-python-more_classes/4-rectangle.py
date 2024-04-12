@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A class that defines a rectangle"""
 
+
 class Rectangle:
     """A class that defines a rectangle
     Args:
@@ -10,6 +11,7 @@ class Rectangle:
           TypeError: Size must be an integer
           ValueError: Size is less than zero
     """
+
     def __init__(self, width=0, height=0):
         """Initialize the Rectangle with the width and height"""
         self.__width = width
