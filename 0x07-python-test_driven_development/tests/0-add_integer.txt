@@ -1,0 +1,77 @@
+Tests Cases for 0-add_integer module
+== == == == == == == == == == == == == == == == == == =
+
+0-add_integer module takes two arguments integer and float and return their sum
+
+Usage
+== == =
+
+Importing function from the module:
+    >> > add_interger = __import__('0-add_integer').add_integer
+
+Adding two positive integer(a=2 and b=3)
+>> > add_integer(2, 3)
+5
+
+Adding one positive integer and one negative integer(a=2 and b=-3)
+>> > add_integer(2, -3)
+-1
+
+Adding two negative integer(a=-5, b=-5)
+>> > add_integer(-5, -5)
+-10
+
+Adding two integers with the second being the same as the default value of b(a=2 and b=98)
+>> > add_integer(2, 98)
+100
+
+Adding a positive float and a negative integer(a=2.5 and b=5)
+>> > add_interger(2.5, 5)
+7
+
+Adding a string and an integer('a' and b=3)
+>> > add_integer('a', 3)
+Traceback(most recent call last):
+            .....
+        TypeError: b must be an integer
+
+
+Adding two integer, one being a negative number while the second being positive and same as the default value of b (a=-2 and b=98)
+   >> > add_integer(-2, 98)
+       96
+
+Adding two integer where the one is a float and the second integer is equal to the value of b (a=2.5 and b=98)
+   >> > add_integer(2.5, 98)
+       100
+
+Adding a positive float and a negative integer (a=4.5 and b=-10)
+   >> > add_integer(4.5, -10)
+       -5
+
+Adding two negative float (a=-3.2 and b=-2.4)
+   >> > add_integer(-3.2, -2.4)
+       -5
+
+Adding a letter and a number (a='c' and b=1)
+  >> > add_integer('c', 1)
+      Traceback (most recent call last):
+              ...
+       TypeError: a must be an integer
+
+Adding two letters (a='c' and b='m')
+  >> > add_integer('c', 'm')
+      Traceback (most recent call last):
+              ...
+       TypeError: a must be an integer
+
+Adding a tuple
+  >> > add_integer((1, 1))
+      Traceback (most recent call last):
+              ...
+       TypeError: a must be an integer
+
+Adding a number and a list
+   >> > add_integer(123, [])
+       Traceback (most recent call last):
+	      ...
+        TypeError: b must be an integer
