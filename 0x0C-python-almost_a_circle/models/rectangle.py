@@ -86,3 +86,56 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """returns the area of the rectangle"""
+        return self.__height * self.__width
+
+    def display(self):
+        """display a rectangle to stdout"""
+        for y in range(self.y):
+            print()
+        for x in range(self.height):
+            for x in range(self.x):
+                print(" ", end='')
+            print ("#" * self.__width)
+        print()
+
+    def update(self, *args, **kwargs):
+        """Updates a rectangle's attributes"""
+        if args and len(args) > 0:
+            i = 0
+            for arg in args:
+                if i == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif i == 1:
+                    self.width = arg
+                elif i == 2:
+                    self.height = arg
+                elif i == 3:
+                    self.x = arg
+                elif i == 4:
+                    self.y = arg
+                i += 1
+        elif kwargs and len(kwargs) > 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    if value is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        return {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y}
