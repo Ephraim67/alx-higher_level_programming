@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Function that devides 2 integers and prints the results"""
+"""
+Function that devides 2 integers
+"""
+
 
 def safe_print_division(a, b):
     """
@@ -10,14 +13,12 @@ def safe_print_division(a, b):
         b (int): The divisor.
 
     Returns:
-        float or None: The result of the division if successful, None otherwise.
+        float or None: The result of the division.
     """
     try:
-        result = a / b
-
+        result = a/b
     except ZeroDivisionError:
         result = None
     finally:
         print("Inside result: {}".format(result))
         return result
-
