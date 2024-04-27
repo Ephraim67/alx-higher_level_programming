@@ -1,1 +1,3 @@
-0x05. Python - Exceptions
+Topic: 0x05. Python - Exceptions
+
+This repo contains everything that has to python function, classes and lot more...
